@@ -8,7 +8,7 @@ define(['d3'], function () {
     function ControlBox(config) {
         this.historyView = config.historyView;
         this.originView = config.originView;
-        this.initialMessage = config.initialMessage || 'Enter git commands below.';
+        this.initialMessage = config.initialMessage || 'Eingabe unten bei $';
         this._commandHistory = [];
         this._currentCommand = -1;
         this._tempCommand = '';
@@ -29,7 +29,7 @@ define(['d3'], function () {
 
             input = cBoxContainer.append('input')
                 .attr('type', 'text')
-                .attr('placeholder', 'enter git command');
+                .attr('placeholder', 'Hier git Befehl eingeben');
 
             input.on('keyup', function () {
                 var e = d3.event;

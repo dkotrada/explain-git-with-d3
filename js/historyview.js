@@ -376,7 +376,7 @@ define(['d3'], function () {
             } else {
                 svg.append('svg:text')
                     .classed('remote-name-display', true)
-                    .text('Local Repository')
+                    .text('Lokales Repositorium')
                     .attr('x', 10)
                     .attr('y', 25);
 
@@ -742,7 +742,7 @@ define(['d3'], function () {
 
         _setCurrentBranch: function (branch) {
             var display = this.svg.select('text.current-branch-display'),
-                text = 'Current Branch: ';
+                text = 'Aktueller Zweig: ';
 
             if (branch && branch.indexOf('/') === -1) {
                 text += branch;
